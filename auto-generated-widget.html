@@ -1696,7 +1696,7 @@
 
                                     var cmd = "G10 L2 P1 X" + xcambiar + " Y" + ycambiar + " A" + acambiar + " Z" + zcambiar;
 
-                                    fileLines[valor] = cmd;
+                                    fileLines[valor+1] = cmd;
 
                                 });
 
@@ -1758,7 +1758,7 @@
                     // fire off Dat Chu's scene reload signal
                     this.onSignalSceneReloaded();
 
-                    
+
                 },10000);
                 },
                 lookAtCenter: function() {
