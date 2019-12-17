@@ -1707,6 +1707,9 @@
 
                     });
 
+
+                    setTimeout(function(){
+
                     gcode = "";
                     for (var n = 0; n < largodecodigo; n++) {
                         gcode = gcode + fileLines[n] + "\n";
@@ -1755,6 +1758,8 @@
                     // fire off Dat Chu's scene reload signal
                     this.onSignalSceneReloaded();
 
+                    
+                },10000);
                 },
                 lookAtCenter: function() {
                     // this method makes the trackball controls look at center of gcode object
