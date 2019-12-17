@@ -1368,7 +1368,7 @@
                 },
                 openGCodeFromText: function(gcode) {
 
-                    alert("ESTE SI ES");
+                    alert("ESTE HI ES");
                     alert(gcode);
 
                     var fileLines = gcode.split("\n")
@@ -1697,6 +1697,12 @@
                         }
 
                     });
+
+                    gcode = "";
+                    for (var n = 0; n < largodecodigo; n++) {
+                        gcode = gcode + fileLines[n]; + "\n"
+
+                    }
 
                     console.log("openGcodeFromText");
                     this.wakeAnimate();
