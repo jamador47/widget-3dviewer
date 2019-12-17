@@ -1354,6 +1354,7 @@
                     }
                     that.loadFile(path, function(gcode) {
                         that.object = that.createObjectFromGCode(gcode);
+
                         that.scene.add(that.object);
                         that.viewExtents();
                         //that.decorateExtents();
@@ -1368,9 +1369,7 @@
                 openGCodeFromText: function(gcode) {
 
                     alert(gcode);
-                    alert(gcode[1]);
 
-                    alert(gcode[0]);
                     console.log("openGcodeFromText");
                     this.wakeAnimate();
                     //$('#openModal').modal('hide');
@@ -1381,6 +1380,8 @@
                         //this.scene.remove(this.decorate);
                     }
                     this.object = this.createObjectFromGCode(gcode);
+                    alert(this.object);
+                    alert(this.object[0]);
                     console.log("done creating object:", this.object);
                     this.scene.add(this.object);
                     //this.lookAtCenter();
