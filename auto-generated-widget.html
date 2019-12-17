@@ -1368,7 +1368,7 @@
                 },
                 openGCodeFromText: function(gcode) {
 
-                    alert("ESTE YFII ES");
+                    alert("ESTE GFII ES");
                     alert(gcode);
 
                     var fileLines = gcode.split("\n")
@@ -1391,7 +1391,8 @@
 
 
                         if (gcodetemporal.match(/\bUAO\b/i)) {
-                            var comando = gcodetemporal.replace("UAO", "UAAO");
+                            var com = gcodetemporal
+                            var comando = com.replace("UAO", "UAAO");
                             fileLines.splice(valor, 0, comando);
                             //alert(n);
                             var HttpClient = function() {
@@ -1544,7 +1545,8 @@
                         }
 
                         if (gcodetemporal.match(/\bUTO\b/i)) {
-                            var comando = gcodetemporal.replace("UTO", "UTTO");
+                            var com = gcodetemporal
+                            var comando = com.replace("UTO", "UTTO");
                             fileLines.splice(valor, 0, comando);
                             var numeroorigen = gcodetemporal.match(/UTO (.*?) /i)[1];
                             var utox = gcodetemporal.match(/X(.*?) /i)[1];
