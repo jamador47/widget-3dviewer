@@ -1368,7 +1368,7 @@
                 },
                 openGCodeFromText: function(gcode) {
 
-                    alert("ESTE tII ES");
+                    alert("ESTE YII ES");
                     alert(gcode);
 
                     var fileLines = gcode.split("\n")
@@ -1388,7 +1388,7 @@
                     alert(arrayuao);
                     arrayuao.forEach(function(valor, indice, array) {
                         var gcodetemporal = fileLines[valor];
-                        fileLines = fileLines.splice(valor, 0, "UAAO");
+                        fileLines.splice(valor, 0, "UAAO");
 
                         if (gcodetemporal.match(/\bUAO\b/i)) {
                             //alert(n);
