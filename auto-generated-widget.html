@@ -1388,7 +1388,7 @@
                     alert(arrayuao);
                     arrayuao.forEach(function(valor, indice, array) {
                         var gcodetemporal = fileLines[valor];
-                        fileLines.splice(valor, 0, "UAAO");
+                        fileLines = fileLines.splice(valor, 0, "UAAO");
 
                         if (gcodetemporal.match(/\bUAO\b/i)) {
                             //alert(n);
