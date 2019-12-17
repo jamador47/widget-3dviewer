@@ -1388,6 +1388,8 @@
                     alert(arrayuao);
                     arrayuao.forEach(function(valor, indice, array) {
                         var gcodetemporal = fileLines[valor];
+                        fileLines.splice(valor, 0, "UAAO");
+
                         if (gcodetemporal.match(/\bUAO\b/i)) {
                             //alert(n);
                             var HttpClient = function() {
@@ -1533,6 +1535,7 @@
 
                                 var cmd = "G10 L2 P1 X" + xcambiar + " Y" + ycambiar + " A" + acambiar + " Z" + zcambiar;
                                 fileLines[valor] = cmd;
+
 
                             });
 
